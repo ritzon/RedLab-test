@@ -1,0 +1,54 @@
+{
+  "status": true,
+  "data": {
+    "{{#each functions}}": {
+      "id": "{{#? this.id}}",
+      "title": "{{#? this.title}}",
+      "type": "{{#? this.type}}",
+      "url": "{{#? this.url}}",
+      "icon": "{{#? this.icon}}",
+      "children" : {
+        "{{#each this.children}}": {
+          "id": "{{#? this.id}}",
+          "title": "{{#? this.title}}",
+          "type": "{{#? this.type}}",
+          "url": "{{#? this.url}}",
+          "icon": "{{#? this.icon}}",
+          "roles": {
+            "{{#each this.Roles}}": {
+              "id": "{{#? this.id}}",
+              "name": "{{#? this.name}}",
+              "actions": {
+                "canView": "{{ this.RoleFunction.canView}}",
+                "canCreate": "{{ this.RoleFunction.canCreate}}",
+                "canEdit": "{{ this.RoleFunction.canEdit}}",
+                "canDelete": "{{ this.RoleFunction.canDelete}}"
+              }
+            }
+          },
+          "children" : {
+            "{{#each this.children}}": {
+              "id": "{{#? this.id}}",
+              "title": "{{#? this.title}}",
+              "type": "{{#? this.type}}",
+              "url": "{{#? this.url}}",
+              "icon": "{{#? this.icon}}",
+              "roles": {
+              "{{#each this.Roles}}": {
+                "id": "{{#? this.id}}",
+                "name": "{{#? this.name}}",
+                "actions": {
+                  "canView": "{{ this.RoleFunction.canView}}",
+                  "canCreate": "{{ this.RoleFunction.canCreate}}",
+                  "canEdit": "{{ this.RoleFunction.canEdit}}",
+                  "canDelete": "{{ this.RoleFunction.canDelete}}"
+                }
+              }
+          }
+            }
+          }
+        }
+      }
+    }
+  }
+}

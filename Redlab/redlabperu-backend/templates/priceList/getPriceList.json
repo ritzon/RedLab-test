@@ -1,0 +1,14 @@
+{
+  "status": true,
+  "data": {
+  	"id": "{{#? priceList.id}}",
+    "name": "{{#? priceList.name}}",
+    "examinations": {
+    	"{{#each priceList.Examinations}}": {
+    		"id": "{{#? this.id}}",
+    		"name": "{{#? this.name}}",
+        "discountPrice": "{{this.ExaminationPrice.price}}"
+    	}
+    }
+  }
+}

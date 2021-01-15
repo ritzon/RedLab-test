@@ -1,0 +1,64 @@
+{
+  "status": true, 
+  "data": {
+    "user": {
+      "id": "{{#? user.id}}",
+      "email": "{{#? user.username}}",
+      "urlAvatar": "{{#? user.urlAvatar}}",
+      "firstFunction": "{{#? user.Function.link}}",
+      "notificationSMS": "{{#? user.notificationSMS}}",
+      "notificationWS": "{{#? user.notificationWS}}",
+      "notificationEmail": "{{#? user.notificationEmail}}"
+    },
+    "person": {
+      "{{#merge}}": [
+        {
+          "id": "{{#? user.Client.id}}",
+          "dni": "{{#? user.Client.dni}}",
+          "code": "{{#? user.Client.code}}",
+          "name": "{{#? user.Client.name}}",
+          "lastNameP": "{{#? user.Client.lastNameP}}",
+          "lastNameM": "{{#? user.Client.lastNameM}}",
+          "displayName": "{{#? user.Client.name}} {{user.Client.lastNameP}}",
+          "nacionality": "{{#? user.Client.nacionality}}",
+          "birthDate": "{{#? user.Client.birthDate}}",
+          "gender": "{{#? user.Client.gender}}",
+          "phoneNumber": "{{#? user.Client.phoneNumber}}",
+          "tlfNumber": "{{#? user.Client.tlfNumber}}",
+          "address": "{{#? user.Client.address}}"
+
+        },
+        {
+          "id": "{{#? user.Employee.id}}",
+          "dni": "{{#? user.Employee.dni}}",
+          "name": "{{#? user.Employee.name}}",
+          "lastNameP": "{{#? user.Employee.lastNameP}}",
+          "lastNameM": "{{#? user.Employee.lastNameM}}",
+          "displayName": "{{#? user.Employee.name}} {{user.Employee.lastNameP}}",
+          "nacionality": "{{#? user.Employee.nacionality}}",
+          "birthDate": "{{#? user.Employee.birthDate}}",
+          "gender": "{{#? user.Employee.gender}}",
+          "phoneNumber": "{{#? user.Employee.phoneNumber}}",
+          "tlfNumber": "{{#? user.Employee.tlfNumber}}",
+          "address": "{{#? user.Employee.address}}",
+          "headquarter": {
+            "id": "{{#? user.Employee.Headquarter.id}}",
+            "name": "{{#? user.Employee.Headquarter.name}}",
+            "address": "{{#? user.Employee.Headquarter.address}}",
+            "tlfNumber": "{{#? user.Employee.Headquarter.tlfNumber}}",
+            "urlImage": "{{#? user.Employee.Headquarter.urlImage}}"
+          }
+        }
+      ]
+    },
+    "accessToken": "{{#? accessToken}}",
+    "roles": {
+      "{{#each user.Roles}}": {
+        "id": "{{#? this.id}}",
+        "name": "{{#? this.name}}",
+        "description": "{{#? this.description}}",
+        "roleStr": "{{#? this.roleStr}}"
+      }
+    }
+  }
+}

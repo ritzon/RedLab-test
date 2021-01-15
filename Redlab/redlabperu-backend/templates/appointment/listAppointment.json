@@ -1,0 +1,50 @@
+{
+  "status": true,
+  "total": "{{data.total}}",
+  "count": "{{data.count}}",
+  "data": {
+    "{{#each data.rows}}": {
+      "id": "{{#? this.id}}",
+      "code": "{{#? this.code}}",
+      "dateAppointment": "{{#? this.dateAppointment}}",
+      "dateAppointmentUS": "{{#? this.dateAppointmentUS}}",
+      "dateAppointmentEU": "{{#? this.dateAppointmentEU}}",
+      "time": "{{#? this.time}}",
+      "time12h": "{{#? this.time12h}}",
+      "totalPrice": "{{#? this.totalPrice}}",
+      "headquarters": "{{#? this.headquarters}}",
+      "status": "{{#? this.status}}",
+      "statusStr": "{{#? this.statusStr}}",
+      "colorStatus": "{{#? this.colorStatus}}",
+      "reason": "{{#? this.reason}}",
+      "client": {
+        "id": "{{#? this.Client.id}}",
+        "userId": "{{#? this.Client.UserId}}",
+        "username": "{{#? this.Client.User.username}}",
+        "dni": "{{#? this.Client.dni}}",
+        "code": "{{#? this.Client.code}}",
+        "name": "{{#? this.Client.name}}",
+        "lastNameP": "{{#? this.Client.lastNameP}}",
+        "lastNameM": "{{#? this.Client.lastNameM}}",
+        "address": "{{#? this.Client.address}}",
+        "nacionality": "{{#? this.Client.nacionality}}",
+        "birthDate": "{{#? this.Client.birthDate}}",
+        "years": "{{#? this.Client.years}}",
+        "gender": "{{#? this.Client.gender}}",
+        "genderStr": "{{#? this.Client.genderStr}}",
+        "phoneNumber": "{{#? this.Client.phoneNumber}}",
+        "tlfNumber": "{{#? this.Client.tlfNumber}}"
+      },
+      "priceList": {
+        "id": "{{#? this.PriceList.id}}",
+        "name": "{{#? this.PriceList.name}}"
+      },
+      "headquarter": {
+        "id": "{{#? this.Headquarter.id}}",
+        "name": "{{#? this.Headquarter.name}}",
+        "address": "{{#? this.Headquarter.address}}",
+        "tlfNumber": "{{#? this.Headquarter.tlfNumber}}"
+      }
+    }
+  }
+}

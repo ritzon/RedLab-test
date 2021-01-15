@@ -1,0 +1,27 @@
+{
+  "status": true,
+  "data": {
+    "{{#each functions}}": {
+      "id": "{{#? this.id}}",
+      "title": "{{#? this.name}}",
+      "page": "{{#? this.link}}",
+      "icon": "{{#? this.icon}}",
+      "sub" : {
+        "{{#each this.children}}": {
+          "id": "{{#? this.id}}",
+          "title": "{{#? this.name}}",
+          "page": "{{#? this.link}}",
+          "icon": "{{#? this.icon}}",
+          "sub" : {
+            "{{#each this.children}}": {
+              "id": "{{#? this.id}}",
+              "title": "{{#? this.name}}",
+              "page": "{{#? this.link}}",
+              "icon": "{{#? this.icon}}"
+            }
+          }
+        }
+      }
+    }
+  }
+}

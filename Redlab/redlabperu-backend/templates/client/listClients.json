@@ -1,0 +1,62 @@
+{
+  "status": true,
+  "total": "{{data.total}}",
+  "count": "{{data.count}}",
+  "data": {
+    "{{#each data.rows}}": {
+      "user": {
+        "id": "{{#? this.User.id}}",
+        "username": "{{#? this.User.username}}",
+        "urlAvatar": "{{#? this.User.urlAvatar}}"
+      },
+      "person": {
+        "id": "{{#? this.id}}",
+        "code": "{{#? this.code}}",
+        "name": "{{#? this.name}}",
+        "lastNameP": "{{#? this.lastNameP}}",
+        "lastNameM": "{{#? this.lastNameM}}",
+        "address": "{{#? this.address}}",
+        "nationality": "{{#? this.nationality}}",
+        "birthDate": "{{#? this.birthDate}}",
+        "birthDateUS": "{{#? this.birthDateUS}}",
+        "gender": "{{#? this.gender}}",
+        "genderStr": "{{#? this.genderStr}}",
+        "civilStatus": "{{#? this.civilStatus}}",
+        "civilStatusStr": "{{#? this.civilStatusStr}}",
+        "phoneNumber": "{{#? this.phoneNumber}}",
+        "historyNumber": "{{#? this.historyNumber}}",
+        "tlfNumber": "{{#? this.tlfNumber}}"
+      },
+      "district": {
+        "id": "{{#? this.District.id}}",
+        "name": "{{#? this.District.name}}",
+        "value": "{{#? this.District.id}}",
+        "label": "{{#? this.District.name}}"
+      },
+      "province": {
+        "id": "{{#? this.District.Province.id}}",
+        "name": "{{#? this.District.Province.name}}",
+        "value": "{{#? this.District.Province.id}}",
+        "label": "{{#? this.District.Province.name}}"
+      },
+      "region": {
+        "id": "{{#? this.District.Province.Region.id}}",
+        "name": "{{#? this.District.Province.Region.name}}",
+        "value": "{{#? this.District.Province.Region.id}}",
+        "label": "{{#? this.District.Province.Region.name}}"
+      },
+      "typeDoc": {
+        "id": "{{#? this.TypeDoc.id}}",
+        "dni": "{{#? this.dni}}",
+        "name": "{{#? this.TypeDoc.name}}"
+      },
+      "roles": {
+        "{{#each this.User.Roles}}": {
+          "id": "{{#? this.id}}",
+          "name": "{{#? this.name}}",
+          "description": "{{#? this.description}}"
+        }
+      }
+    }
+  }
+}

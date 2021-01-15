@@ -1,0 +1,12 @@
+{
+  "status": true,
+  "total": "{{#? data.total}}",
+  "count": "{{#? data.count}}",
+  "data": {
+      "{{#each data.rows}}": {
+        "id": "{{#? this.id}}",
+        "name": "{{#? this.name}}",
+        "description": "{{#? this.description}}"
+      }
+  }
+}

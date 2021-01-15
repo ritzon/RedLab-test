@@ -1,0 +1,34 @@
+{
+    "status": true,
+    "data": {
+        "totalAppointments$": "{{#? report.acumTotalPriceAppointments}}",
+        "totalExaminations$": "{{#? report.acumTotalPriceExams}}",
+        "dates": {
+            "{{#each report.appointmentsByDate}}": {
+                "date": "{{#? this.date}}",
+                "appointments": {
+                    "{{#each this.appointments}}": {
+                        "id": "{{#? this.id}}",
+                        "code": "{{#? this.code}}",
+                        "fullName": "{{#? this.Client.fullName}}",
+                        "dni": "{{#? this.Client.dni}}",
+                        "age": "{{#? this.Client.years}}",
+                        "totalPrice": "{{#? this.totalPrice}}",
+                        "services": {
+                            "{{#each this.Services}}": {
+                                "name": "{{#? this.service}}",
+                                "examinations": {
+                                    "{{#each this.examinations}}": {
+                                        "id": "{{#? this.id}}",
+                                        "name": "{{#? this.name}}",
+                                        "price": "{{#? this.PriceLists[0].ExaminationPrice.price}}"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

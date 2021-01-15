@@ -1,0 +1,41 @@
+{
+  "status": true,
+  "total": "{{#? data.total}}",
+  "count": "{{#? data.count}}",
+  "data": {
+    "{{#each data.rows}}": {
+      "id": "{{#? this.id}}",
+      "name": "{{#? this.name}}",
+      "code": "{{#? this.code}}",
+      "indications": "{{#? this.indications}}",
+      "status": "{{#? this.status}}",
+      "observation": "{{#? this.Appointments[0].AppointmentDetail.observation}}",
+      "typeSample": "{{#? this.typeSample}}",
+      "supplies": "{{#? this.supplies}}",
+      "storageTemperature": "{{#? this.storageTemperature}}",
+      "storageTemperature": "{{#? this.storageTemperature}}",
+      "fastingConditions": "{{#? this.fastingConditions}}",
+      "runFrequency": "{{#? this.runFrequency}}",
+      "processTime": "{{#? this.processTime}}",
+      "volume": "{{#? this.volume}}",
+      "reportTime": "{{#? this.reportTime}}",
+      "service": {
+        "id": "{{#? this.Service.id}}",
+        "name": "{{#? this.Service.name}}",
+        "description": "{{#? this.Service.description}}"
+      },
+      "referenceValues": {
+        "{{#each this.ReferenceValues}}": {
+          "id": "{{#? this.id}}",
+          "name": "{{#? this.name}}",
+          "value": "{{#? this.id}}",
+          "label": "{{#? this.name}}",
+          "unit": "{{#? this.unit}}",
+          "allValues": "{{#? this.ExaminationReferenceValue.allValues}}",
+          "group": "{{#? this.ExaminationReferenceValue.group}}",
+          "value": "{{#? this.AppointmentDetails[0].ExaminationDetail.value}}"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+    "status": true,
+    "data": {
+        "{{#each data}}": {
+            "id": "{{#? this.id}}",
+            "birthDate": "{{#? this.birthDate}}",
+            "admissionDate": "{{#? this.admissionDate}}",
+            "birthDateUS": "{{#? this.birthDateUS}}",
+            "admissionDateUS": "{{#? this.admissionDateUS}}",
+            "name": "{{#? this.name}}",
+            "lastNameP": "{{#? this.lastNameP}}",
+            "lastNameM": "{{#? this.lastNameM}}",
+            "fullName": "{{#? this.fullName}}",
+            "phoneNumber": "{{#? this.phoneNumber}}",
+            "tlfNumber": "{{#? this.tlfNumber}}",
+            "gender": "{{#? this.gender}}",
+            "genderStr": "{{#? this.genderStr}}",
+            "civilStatus": "{{#? this.civilStatus}}",
+            "civilStatusStr": "{{#? this.civilStatusStr}}",
+            "digitalSignatureUrl": "{{#? this.digitalSignatureUrl}}",
+            "address": "{{#? this.address}}"
+        }
+    }
+}

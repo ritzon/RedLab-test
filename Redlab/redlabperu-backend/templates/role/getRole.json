@@ -1,0 +1,15 @@
+{
+  "status": true,
+  "data": {
+    "id": "{{#? role.id}}",
+    "name": "{{#? role.name}}",
+    "description": "{{#? role.description}}",
+    "functions" : {
+      "{{#each role.Functions}}": {
+        "id": "{{#? this.id}}",
+        "name": "{{#? this.name}}",
+        "description": "{{#? this.description}}"
+      }
+    }
+  }
+}

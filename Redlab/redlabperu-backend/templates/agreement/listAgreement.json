@@ -1,0 +1,18 @@
+{
+  "status": true,
+  "total": "{{data.total}}",
+  "count": "{{data.count}}",
+  "data": {
+    "{{#each data.rows}}": {
+      "id": "{{#? this.id}}",
+      "name": "{{#? this.name}}",
+      "address": "{{#? this.address}}",
+      "ruc": "{{#? this.ruc}}",
+      "price": "{{#? this.price}}",
+      "tlfNumber": "{{#? this.tlfNumber}}",
+      "description": "{{#? this.description}}",
+      "email": "{{#? this.email}}",
+      "TypeAgreementId": "{{#? this.TypeAgreementId}}"
+    }
+  }
+}

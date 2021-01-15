@@ -1,0 +1,8 @@
+{
+  "status": true,
+  "data": {
+    "id": "{{#? data.id}}",
+    "name": "{{#? data.name}}",
+    "description": "{{#? data.description}}"
+  }
+}

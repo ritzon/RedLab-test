@@ -1,0 +1,20 @@
+{
+	"status": true,
+    "data": {
+        "id": "{{#? agreement.id}}",
+        "name": "{{#? agreement.name}}",
+        "address": "{{#? agreement.address}}",
+        "ruc": "{{#? agreement.ruc}}",
+        "price": "{{#? agreement.price}}",
+        "tlfNumber": "{{#? agreement.tlfNumber}}",
+        "description": "{{#? agreement.description}}",
+        "email": "{{#? agreement.email}}",
+        "TypeAgreementId": "{{#? agreement.TypeAgreementId}}",
+        "pricesList": {
+            "{{#each agreement.PriceLists}}": {
+                "id": "{{#? this.id}}",
+                "name": "{{#? this.name}}"
+            }
+        }
+    }
+}

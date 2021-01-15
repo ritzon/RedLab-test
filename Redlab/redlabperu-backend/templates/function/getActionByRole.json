@@ -1,0 +1,22 @@
+{
+  "status": true,
+  "data": {
+    "id": "{{#? auxFunction.id}}",
+    "title": "{{#? auxFunction.title}}",
+    "type": "{{#? auxFunction.type}}",
+    "url": "{{#? auxFunction.url}}",
+    "icon": "{{#? auxFunction.icon}}",
+    "role" : {
+      "{{#each auxFunction.Roles}}": {
+        "id": "{{#? this.id}}",
+        "name": "{{#? this.name}}",
+        "actions": {
+          "canView": "{{this.RoleFunction.canView}}",
+          "canEdit": "{{this.RoleFunction.canEdit}}",
+          "canCreate": "{{this.RoleFunction.canCreate}}",
+          "canDelete": "{{this.RoleFunction.canDelete}}"
+        }
+      }
+    }
+  }
+}

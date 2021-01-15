@@ -1,0 +1,58 @@
+{
+  "status": true,
+  "data": {
+    "user": {
+      "id": "{{#? client.User.id}}",
+      "username": "{{#? client.User.username}}",
+      "urlAvatar": "{{#? client.User.urlAvatar}}"
+    },
+    "person": {
+      "id": "{{#? client.id}}",
+      "code": "{{#? client.code}}",
+      "name": "{{#? client.name}}",
+      "lastNameP": "{{#? client.lastNameP}}",
+      "lastNameM": "{{#? client.lastNameM}}",
+      "address": "{{#? client.address}}",
+      "nationality": "{{#? client.nationality}}",
+      "birthDate": "{{#? client.birthDate}}",
+      "birthDateUS": "{{#? client.birthDateUS}}",
+      "gender": "{{#? client.gender}}",
+      "genderStr": "{{#? client.genderStr}}",
+      "civilStatus": "{{#? client.civilStatus}}",
+      "civilStatusStr": "{{#? client.civilStatusStr}}",
+      "phoneNumber": "{{#? client.phoneNumber}}",
+      "historyNumber": "{{#? client.historyNumber}}",
+      "tlfNumber": "{{#? client.tlfNumber}}"
+    },
+    "district": {
+      "id": "{{#? client.District.id}}",
+      "name": "{{#? client.District.name}}",
+      "value": "{{#? client.District.id}}",
+      "label": "{{#? client.District.name}}"
+    },
+    "province": {
+      "id": "{{#? client.District.Province.id}}",
+      "name": "{{#? client.District.Province.name}}",
+      "value": "{{#? client.District.Province.id}}",
+      "label": "{{#? client.District.Province.name}}"
+    },
+    "region": {
+      "id": "{{#? client.District.Province.Region.id}}",
+      "name": "{{#? client.District.Province.Region.name}}",
+      "value": "{{#? client.District.Province.Region.id}}",
+      "label": "{{#? client.District.Province.Region.name}}"
+    },
+    "typeDoc": {
+      "id": "{{#? client.TypeDoc.id}}",
+      "dni": "{{#? client.dni}}",
+      "name": "{{#? client.TypeDoc.name}}"
+    },
+    "roles": {
+      "{{#each client.User.Roles}}": {
+        "id": "{{#? this.id}}",
+        "name": "{{#? this.name}}",
+        "description": "{{#? this.description}}"
+      }
+    }
+  }
+}

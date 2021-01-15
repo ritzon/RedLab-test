@@ -1,0 +1,99 @@
+{
+  "status": true,
+  "total": "{{data.total}}",
+  "count": "{{data.count}}",
+  "data": {
+    "{{#each data.rows}}": {
+      "user": {
+        "id": "{{#? this.User.id}}",
+        "username": "{{#? this.User.username}}",
+        "urlAvatar": "{{#? this.User.urlAvatar}}"
+      },
+      "person": {
+        "id": "{{#? this.id}}",
+        "birthDate": "{{#? this.birthDate}}",
+        "admissionDate": "{{#? this.admissionDate}}",
+        "birthDateUS": "{{#? this.birthDateUS}}",
+        "admissionDateUS": "{{#? this.admissionDateUS}}",
+        "name": "{{#? this.name}}",
+        "lastNameP": "{{#? this.lastNameP}}",
+        "lastNameM": "{{#? this.lastNameM}}",
+        "phoneNumber": "{{#? this.phoneNumber}}",
+        "tlfNumber": "{{#? this.tlfNumber}}",
+        "gender": "{{#? this.gender}}",
+        "genderStr": "{{#? this.genderStr}}",
+        "civilStatus": "{{#? this.civilStatus}}",
+        "civilStatusStr": "{{#? this.civilStatusStr}}",
+        "digitalSignatureUrl": "{{#? this.digitalSignatureUrl}}",
+        "address": "{{#? this.address}}",
+        "typeDirection": "{{#? this.typeDirection}}",
+        "typeDirectionStr": "{{#? this.typeDirectionStr}}",
+        "referencePoint": "{{#? this.referencePoint}}",
+        "address": "{{#? this.address}}"
+      },
+      "typeDoc": {
+        "id": "{{#? this.TypeDoc.id}}",
+        "dni": "{{#? this.dni}}",
+        "name": "{{#? this.TypeDoc.name}}"
+      },
+      "tuition": {
+        "id": "{{#? this.Tuition.id}}",
+        "tuitionNumber": "{{#? this.tuitionNumber}}",
+        "name": "{{#? this.Tuition.name}}"
+      },
+      "tuition2": {
+        "id": "{{#? this.Tuition2.id}}",
+        "tuitionNumber": "{{#? this.tuitionNumber2}}",
+        "name": "{{#? this.Tuition2.name}}"
+      },
+      "category": {
+        "id": "{{#? this.Category.id}}",
+        "name": "{{#? this.Category.name}}"
+      },
+      "speciality": {
+        "id": "{{#? this.Speciality.id}}",
+        "name": "{{#? this.Speciality.name}}"
+      },
+      "typeEmployee": {
+        "id": "{{#? this.TypeEmployee.id}}",
+        "name": "{{#? this.TypeEmployee.name}}"
+      },
+      "headquarter": {
+        "id": "{{#? this.Headquarter.id}}",
+        "name": "{{#? this.Headquarter.name}}"
+      },
+      "profession": {
+        "id": "{{#? this.Profession.id}}",
+        "name": "{{#? this.Profession.name}}"
+      },
+      "district": {
+        "id": "{{#? this.District.id}}",
+        "name": "{{#? this.District.name}}",
+        "value": "{{#? this.District.id}}",
+        "label": "{{#? this.District.name}}"
+      },
+      "province": {
+        "id": "{{#? this.District.Province.id}}",
+        "name": "{{#? this.District.Province.name}}",
+        "value": "{{#? this.District.Province.id}}",
+        "label": "{{#? this.District.Province.name}}"
+      },
+      "region": {
+        "id": "{{#? this.District.Province.Region.id}}",
+        "name": "{{#? this.District.Province.Region.name}}",
+        "value": "{{#? this.District.Province.Region.id}}",
+        "label": "{{#? this.District.Province.Region.name}}"
+      },
+      "roles": {
+        "{{#each this.User.Roles}}": {
+          "id": "{{#? this.id}}",
+          "name": "{{#? this.name}}",
+          "description": "{{#? this.description}}"
+        }
+      },
+      "rolesId": {
+        "{{#each this.User.Roles}}": "{{this.id}}"
+      }
+    }
+  }
+}

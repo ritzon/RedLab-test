@@ -1,0 +1,47 @@
+{
+  "status": true,
+  "data": {
+    "id": "{{#? appointment.id}}",
+    "code": "{{#? appointment.code}}",
+    "dateAppointment": "{{#? appointment.dateAppointment}}",
+    "dateAppointmentUS": "{{#? appointment.dateAppointmentUS}}",
+    "dateAppointmentEU": "{{#? appointment.dateAppointmentEU}}",
+    "time": "{{#? appointment.time}}",
+    "time12h": "{{#? appointment.time12h}}",
+    "createdDate": "{{#? appointment.createdDate}}",
+    "totalPrice": "{{#? appointment.totalPrice}}",
+    "headquarters": "{{#? appointment.headquarters}}",
+    "statusStr": "{{#? appointment.statusStr}}",
+    "colorStatus": "{{#? appointment.colorStatus}}",
+    "AgreementId": "{{#? appointment.PriceList.AgreementId}}",
+    "PriceListId": "{{#? appointment.PriceList.id}}",
+    "EmployeeId": "{{#? appointment.Employee.id}}",
+    "HeadquarterId": "{{#? appointment.Headquarter.id}}",
+    "client": {
+      "id": "{{#? appointment.Client.id}}",
+      "userId": "{{#? appointment.Client.UserId}}",
+      "username": "{{#? appointment.Client.User.username}}",
+      "dni": "{{#? appointment.Client.dni}}",
+      "code": "{{#? appointment.Client.code}}",
+      "name": "{{#? appointment.Client.name}}",
+      "lastNameP": "{{#? appointment.Client.lastNameP}}",
+      "lastNameM": "{{#? appointment.Client.lastNameM}}",
+      "address": "{{#? appointment.Client.address}}",
+      "nacionality": "{{#? appointment.Client.nacionality}}",
+      "birthDate": "{{#? appointment.Client.birthDate}}",
+      "gender": "{{#? appointment.Client.gender}}",
+      "phoneNumber": "{{#? appointment.Client.phoneNumber}}",
+      "tlfNumber": "{{#? appointment.Client.tlfNumber}}"
+    },
+    "priceList": {
+      "id": "{{#? appointment.PriceList.id}}",
+      "name": "{{#? appointment.PriceList.name}}"
+    },
+    "headquarter": {
+      "id": "{{#? appointment.Headquarter.id}}",
+      "name": "{{#? appointment.Headquarter.name}}",
+      "address": "{{#? appointment.Headquarter.address}}",
+      "tlfNumber": "{{#? appointment.Headquarter.tlfNumber}}"
+    }
+  }
+}

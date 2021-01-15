@@ -1,0 +1,35 @@
+{
+  "status": true,
+  "data": {
+    "{{#each users}}": {
+      "user": {
+        "id": "{{#? this.id}}",
+        "email": "{{#? this.username}}",
+        "urlAvatar": "{{#? this.urlAvatar}}",
+        "notificationSMS": "{{#? this.notificationSMS}}",
+        "notificationWS": "{{#? this.notificationWS}}",
+        "notificationEmail": "{{#? this.notificationEmail}}"
+      },
+      "person": {
+        "{{#merge}}": [
+          {
+            "id": "{{#? this.Client.id}}",
+            "identification": "{{#? this.Client.identification}}",
+            "firstName": "{{#? this.Client.firstName}}",
+            "lastName": "{{#? this.Client.lastName}}",
+            "gender": "{{#? this.Client.gender}}",
+            "phoneNumber": "{{#? this.Client.phoneNumber}}"
+          },
+          {
+            "id": "{{#? this.Employee.id}}",
+            "identification": "{{#? this.Employee.identification}}",
+            "firstName": "{{#? this.Employee.firstName}}",
+            "lastName": "{{#? this.Employee.lastName}}",
+            "gender": "{{#? this.Employee.gender}}",
+            "phoneNumber": "{{#? this.Employee.phoneNumber}}"
+          }
+        ]
+      }
+    }
+  }
+}

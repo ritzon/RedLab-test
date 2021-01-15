@@ -1,0 +1,8 @@
+{
+  "status": true,
+  "message" : { 
+		"code" : "{{#? message.code}}",
+		"text" : "{{#? message.text}}"
+	}
+
+}

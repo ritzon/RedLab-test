@@ -1,0 +1,64 @@
+{
+  "status": true,
+  "data": {
+    "excludeDays": "{{schedule.excludeDays}}",
+    "appointments": {
+        "{{#each schedule.appointments}}": {
+          "id": "{{#? this.id}}",
+          "dateAppointment": "{{#? this.dateAppointment}}",
+          "dateAppointmentUS": "{{#? this.dateAppointmentUS}}",
+          "dateAppointmentEU": "{{#? this.dateAppointmentEU}}",
+          "dateAppointmentUSv2": "{{#? this.dateAppointmentUSv2}}",
+          "turn": "{{#? this.turn}}",
+          "statusStr": "{{#? this.statusStr}}",
+          "color": "{{#? this.colorStatus}}",
+          "reason": "{{#? this.reason}}",
+          "title": "{{#? this.reason}}",
+          "Request": {
+            "id": "{{#? this.Request.id}}",
+            "comment": "{{#? this.Request.comment}}",
+            "requestDate": "{{#? this.Request.requestDate}}",
+            "aprobationDate": "{{#? this.Request.aprobationDate}}",
+            "attendedDate": "{{#? this.Request.attendedDate}}",
+            "wishDate": "{{#? this.Request.wishDate}}",
+            "nameForClient": "{{this.Request.TypeService.name}}, agente: {{this.Request.Employee.firstName}} {{this.Request.Employee.firstName}} - {{this.Request.statusStr}}",
+            "nameForEmployee": "{{this.Request.TypeService.name}}, cliente: {{this.Request.Client.firstName}} {{this.Request.Client.firstName}} - {{this.Request.statusStr}}",
+            "status": "{{#? this.Request.statusStr}}",
+            "client": {
+              "id": "{{#? this.Request.Client.id}}",
+              "userId": "{{#? this.Request.Client.UserId}}",
+              "username": "{{#? this.Request.Client.User.username}}",
+              "identification": "{{#? this.Request.Client.identification}}",
+              "firstName": "{{#? this.Request.Client.firstName}}",
+              "lastName": "{{#? this.Request.Client.lastName}}",
+              "bankName": "{{#? this.Request.Client.bankName}}",
+              "bankAccount": "{{#? this.Request.Client.bankAccount}}",
+              "birthDate": "{{#? this.Request.Client.birthDate}}",
+              "gender": "{{#? this.Request.Client.gender}}"
+            },
+            "employee": {
+              "id": "{{#? this.Request.Employee.id}}",
+              "userId": "{{#? this.Request.Employee.UserId}}",
+              "identification": "{{#? this.Request.Employee.identification}}",
+              "firstName": "{{#? this.Request.Employee.firstName}}",
+              "lastName": "{{#? this.Request.Employee.lastName}}",
+              "phoneNumber": "{{#? this.Request.Employee.phoneNumber}}",
+              "gender": "{{#? this.Request.Employee.gender}}",
+              "phoneNumber": "{{#? this.Request.Employee.phoneNumber}}"
+            },
+            "typeRequest": {
+              "id": "{{#? this.Request.TypeRequest.id}}",
+              "name": "{{#? this.Request.TypeRequest.name}}",
+              "description": "{{#? this.Request.TypeRequest.description}}"
+            }
+          },
+          "typeAppointment": {
+            "id": "{{#? this.TypeAppointment.id}}",
+            "name": "{{#? this.TypeAppointment.name}}",
+            "description": "{{#? this.TypeAppointment.description}}"
+          }
+        }
+    }
+    
+  }
+}

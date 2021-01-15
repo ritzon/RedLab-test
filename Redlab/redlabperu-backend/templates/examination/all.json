@@ -1,0 +1,21 @@
+{
+  "status": true,
+  "data": {
+    "{{#each data}}": {
+      "id": "{{#? this.id}}",
+      "name": "{{#? this.name}}",
+      "code": "{{#? this.code}}",
+      "indications": "{{#? this.indications}}",
+      "status": "{{#? this.status}}",
+      "typeSample": "{{#? this.typeSample}}",
+      "supplies": "{{#? this.supplies}}",
+      "storageTemperature": "{{#? this.storageTemperature}}",
+      "storageTemperature": "{{#? this.storageTemperature}}",
+      "fastingConditions": "{{#? this.fastingConditions}}",
+      "runFrequency": "{{#? this.runFrequency}}",
+      "processTime": "{{#? this.processTime}}",
+      "volume": "{{#? this.volume}}",
+      "reportTime": "{{#? this.reportTime}}"
+    }
+  }
+}

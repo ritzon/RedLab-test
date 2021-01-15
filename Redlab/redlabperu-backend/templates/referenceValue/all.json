@@ -1,0 +1,13 @@
+{
+  "status": true,
+  "data": {
+      "{{#each data}}": {
+        "id": "{{#? this.id}}",
+        "value": "{{#? this.id}}",
+        "name": "{{#? this.name}}",
+        "label": "{{#? this.name}}",
+        "unit": "{{#? this.unit}}",
+        "allValues": ""
+      }
+  }
+}

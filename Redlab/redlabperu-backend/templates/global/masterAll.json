@@ -1,0 +1,12 @@
+{
+  "status": true,
+  "data": {
+      "{{#each data}}": {
+        "name": "{{#? this.name}}",
+        "id": "{{#? this.id}}",
+        "label": "{{#? this.name}}",
+        "value": "{{#? this.id}}",
+        "price": "{{#? this.price}}"
+      }
+  }
+}

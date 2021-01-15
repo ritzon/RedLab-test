@@ -1,0 +1,52 @@
+{
+  "status": true,
+  "total": "{{#? data.total}}",
+  "count": "{{#? data.count}}",
+  "data": {
+    "result": "{{#? data.rows[0].Examinations[0].Appointments[0].result}}",
+    "ResponsibleId": "{{#? data.rows[0].Examinations[0].Appointments[0].ResponsibleId}}",
+    "responsible": "{{#? data.rows[0].Examinations[0].Appointments[0].Responsible.fullName}}",
+    "SpecialityId": "{{#? data.rows[0].Examinations[0].Appointments[0].Responsible.SpecialityId}}",
+    "specialityName": "{{#? data.rows[0].Examinations[0].Appointments[0].Responsible.Speciality.name}}",
+    "services": {
+      "{{#each data.rows}}": {
+        "id": "{{#? this.id}}",
+        "name": "{{#? this.name}}",
+        "description": "{{#? this.description}}",
+        "examinations": {
+          "{{#each this.Examinations}}": {
+            "id": "{{#? this.id}}",
+            "name": "{{#? this.name}}",
+            "code": "{{#? this.code}}",
+            "indications": "{{#? this.indications}}",
+            "status": "{{#? this.status}}",
+            "typeSample": "{{#? this.typeSample}}",
+            "supplies": "{{#? this.supplies}}",
+            "storageTemperature": "{{#? this.storageTemperature}}",
+            "storageTemperature": "{{#? this.storageTemperature}}",
+            "fastingConditions": "{{#? this.fastingConditions}}",
+            "runFrequency": "{{#? this.runFrequency}}",
+            "processTime": "{{#? this.processTime}}",
+            "volume": "{{#? this.volume}}",
+            "reportTime": "{{#? this.reportTime}}",
+            "groups": {
+              "{{#each this.Groups}}": {
+                "name": "{{#? this.name}}",
+                "referenceValues": {
+                  "{{#each this.ReferenceValues}}": {
+                    "id": "{{#? this.id}}",
+                    "name": "{{#? this.name}}",
+                    "unit": "{{#? this.unit}}",
+                    "allValues": "{{#? this.ExaminationReferenceValue.allValues}}",
+                    "group": "{{#? this.ExaminationReferenceValue.group}}",
+                    "value": "{{this.AppointmentDetails.length ? this.AppointmentDetails[0].ExaminationDetail.value : ''}}"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

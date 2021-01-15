@@ -1,0 +1,24 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": "sap123",
+    "database": "Redlab",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "c9development": {
+    "username": "ubuntu",
+    "password": "12345",
+    "database": "redlab",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "ubuntu",
+    "password": "12345",
+    "database": "redlab",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+    "logging": false
+  }
+}
